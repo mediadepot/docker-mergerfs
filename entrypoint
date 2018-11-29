@@ -1,6 +1,4 @@
 #!/bin/sh
 
-echo /usr/bin/mergerfs "-d $MERGERFS_OPTS" "$MERGERFS_SRC" "$MERGERFS_DEST"
-
-
-exec /usr/bin/mergerfs -d $MERGERFS_OPTS $MERGERFS_SRC $MERGERFS_DEST
+exec /usr/bin/mergerfs -d -o direct_io,defaults,allow_other,minfreespace=50G,fsname=mergerfs \
+    /mnt/drive* /media/storage
