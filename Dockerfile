@@ -6,4 +6,4 @@ RUN dpkg -i /tmp/mergerfs.deb && rm /tmp/mergerfs.deb
 
 CMD /usr/bin/mergerfs -d -o direct_io,defaults,allow_other,minfreespace=50G,fsname=mergerfs /mnt/drive\* /media/storage
 
-HEALTHCHECK CMD ["ls /media/storage"]
+HEALTHCHECK CMD ls /media/storage
