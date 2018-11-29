@@ -4,6 +4,6 @@ ADD https://github.com/trapexit/mergerfs/releases/download/2.23.0/mergerfs_2.23.
 
 RUN dpkg -i /tmp/mergerfs.deb && rm /tmp/mergerfs.deb
 
-CMD /usr/bin/mergerfs -d -o direct_io,defaults,allow_other,minfreespace=50G,fsname=mergerfs /mnt/drive\* /media/storage
+CMD /usr/bin/mergerfs -f -d -o direct_io,defaults,allow_other,minfreespace=50G,fsname=mergerfs /mnt/drive\* /media/storage
 
 HEALTHCHECK CMD ls /media/storage
