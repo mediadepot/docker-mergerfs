@@ -3,4 +3,4 @@
 echo /usr/bin/mergerfs "-d $MERGERFS_OPTS" "$MERGERFS_SRC" "$MERGERFS_DEST"
 
 
-/usr/bin/mergerfs "-d $MERGERFS_OPTS" "$MERGERFS_SRC" "$MERGERFS_DEST"
+exec /usr/bin/mergerfs "-d $MERGERFS_OPTS" "$MERGERFS_SRC" "$MERGERFS_DEST"
